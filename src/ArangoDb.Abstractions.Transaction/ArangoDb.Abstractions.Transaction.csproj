@@ -8,7 +8,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RootNamespace>GGroupp.Infra.ArangoDb</RootNamespace>
     <AssemblyName>GGroupp.Infra.ArangoDb.Abstractions.Transaction</AssemblyName>
-    <Version>1.0.0-build.2</Version>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
