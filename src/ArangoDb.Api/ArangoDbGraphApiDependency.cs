@@ -38,6 +38,5 @@ public static class ArangoDbGraphApiDependency
         =>
         new(
             baseAddress: new(section["BaseAddressUrl"] ?? string.Empty),
-            databaseId: section["DatabaseId"] ?? string.Empty,
-            jwt: section["Jwt"] ?? string.Empty);
+            databaseId: section["DatabaseId"] ?? string.Empty);
 }

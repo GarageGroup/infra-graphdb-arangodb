@@ -60,7 +60,7 @@ jobs:
     - name: Pack ArangoDb.Abstractions
       run: dotnet pack ./src/*/ArangoDb.Abstractions.csproj --no-restore -o ~/nuget  -c Release
 
-    #ArangoDb.Api
+    # ArangoDb.Api
 
     - name: Restore ArangoDb.Api
       run: dotnet restore ./src/*/ArangoDb.Api.csproj
@@ -70,6 +70,17 @@ jobs:
 
     - name: Pack ArangoDb.Api
       run: dotnet pack ./src/*/ArangoDb.Api.csproj --no-restore -o ~/nuget  -c Release
+
+    # ArangoDb.Api.Authorization.Basic
+
+    - name: Restore ArangoDb.Api.Authorization.Basic
+      run: dotnet restore ./src/*/ArangoDb.Api.Authorization.Basic.csproj
+
+    - name: Build ArangoDb.Api.Authorization.Basic
+      run: dotnet build ./src/*/ArangoDb.Api.Authorization.Basic.csproj --no-restore  -c Release
+
+    - name: Pack ArangoDb.Api.Authorization.Basic
+      run: dotnet pack ./src/*/ArangoDb.Api.Authorization.Basic.csproj --no-restore -o ~/nuget  -c Release
 
     # Push
 
