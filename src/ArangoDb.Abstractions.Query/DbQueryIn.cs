@@ -7,13 +7,13 @@ namespace GGroupp.Infra.ArangoDb;
 
 public sealed record class DbQueryIn
 {
-    private static readonly IReadOnlyDictionary<string, object> EmptyQueryParameters;
+    private static readonly IReadOnlyDictionary<string, object?> EmptyQueryParameters;
 
     static DbQueryIn()
         =>
-        EmptyQueryParameters = new ReadOnlyDictionary<string, object>(new Dictionary<string, object>());
+        EmptyQueryParameters = new ReadOnlyDictionary<string, object?>(new Dictionary<string, object?>());
 
-    public DbQueryIn(string query, [AllowNull] IReadOnlyDictionary<string, object> queryParameters)
+    public DbQueryIn(string query, [AllowNull] IReadOnlyDictionary<string, object?> queryParameters)
     {
         Query = query ?? string.Empty;
         QueryParameters = queryParameters ?? EmptyQueryParameters;
@@ -25,7 +25,7 @@ public sealed record class DbQueryIn
 
     public string Query { get; }
 
-    public IReadOnlyDictionary<string, object> QueryParameters { get; }
+    public IReadOnlyDictionary<string, object?> QueryParameters { get; }
 
     public long? BatchSize { get; init; }
 

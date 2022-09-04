@@ -6,7 +6,7 @@ internal readonly record struct DbCursorJsonIn
 {
     public string? Query { get; init; }
 
-    public IReadOnlyDictionary<string, object>? BindVars { get; init; }
+    public IReadOnlyDictionary<string, object?>? BindVars { get; init; }
 
     public DbCursorOptionJson? Options { get; init; }
 
